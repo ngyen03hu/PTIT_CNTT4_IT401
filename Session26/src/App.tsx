@@ -1,26 +1,18 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Ex01 from "./Components/PTIT_CNTT4_IT104_Session26_ Exercises01/Ex01";
+import React from 'react'
+import Ex0506 from './components/PTIT_CNTT4_IT104_Session26_ Exercises05+06/Ex0506'
+// import Ex02 from './components/PTIT_CNTT4_IT104_Session26_ Exercises02/Ex02'
+// import Ex03 from './components/PTIT_CNTT4_IT104_Session26_ Exercises03/Ex03'
+// import Ex01 from './components/PTIT_CNTT4_IT104_Session26_ Exercises01/Ex01'
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <div style={{ padding: "20px" }}>
-        <h1>Demo Router trong App.tsx</h1>
-        <nav>
-          <ul>
-            <li><Link to="/product/1/AoThun">Xem sản phẩm 1 - Áo thun</Link></li>
-            <li><Link to="/product/2/QuanJean">Xem sản phẩm 2 - Quần jean</Link></li>
-          </ul>
-        </nav>
+    <div>
+      {/* <Ex01></Ex01> */}
+      {/* <Ex02></Ex02> */}
+      {/* <Ex03/> */}
+      {/* <Ex04></Ex04> */}
+      <Ex0506 />git config core.autocrlf true
 
-        <Routes>
-          {/* Trang Home */}
-          <Route path="/" element={<h2>Trang Home</h2>} />
-
-          {/* Route tới Ex01 */}
-          <Route path="/product/:id/:name" element={<Ex01 />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
-  );
+    </div>
+  )
 }
