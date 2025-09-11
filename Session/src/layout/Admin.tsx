@@ -8,7 +8,9 @@ export default function Admin() {
             <br />
             <NavLink to="/admin/produc">quan ly san pham </NavLink><br />
             <NavLink to="/admin/oder">Quan ly hao don </NavLink>
-            <header>dau trang </header>
+            <header>
+
+            </header>
             <Outlet></Outlet>
             <footer>chan trang</footer>
         </div>
