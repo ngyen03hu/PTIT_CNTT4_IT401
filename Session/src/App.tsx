@@ -1,10 +1,62 @@
 import React from 'react'
-import Ex01 from './Components/PTIT_CNTT4_IT104_Session25_ Exercises01/Ex01'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import NotFound from './pages/NotFound'
+import Admin from './layout/Admin'
+import UserManager from './pages/UserManager'
+import ProductManager from './pages/ProductManager'
+import "./App.css"
+import Order from './pages/Order'
+import Login from './pages/Login'
+import ProductDetail from './pages/ProductDetail'
 
 export default function App() {
+  const routers = createBrowserRouter([
+    {
+      path: "/about",
+      element: <About></About>
+    },
+    {
+      path: "/contact",
+      element: <Contact></Contact>
+    },
+    {
+      path: "/login",
+      element: <Login></Login>
+    },
+    {
+      path: "/admin",
+      element: <Admin></Admin>,
+      children: [
+        {
+          path: "user",
+          element: <UserManager></UserManager>
+        },
+        {
+          path: "product",
+          element: <ProductManager></ProductManager>
+        },
+        {
+          path: "order",
+          element: <Order></Order>
+        },
+        {
+          path: "product/:abc",
+          element: <ProductDetail></ProductDetail>
+        }
+      ]
+
+    },
+    {
+      path: "*",
+      element: <NotFound></NotFound>
+    }
+  ])
   return (
     <div>
-      <Ex01 />
+      REACT ROUTER!
+      <RouterProvider router={routers}></RouterProvider>
     </div>
   )
 }

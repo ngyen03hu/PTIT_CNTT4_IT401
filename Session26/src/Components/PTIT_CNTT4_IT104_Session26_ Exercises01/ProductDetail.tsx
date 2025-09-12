@@ -1,13 +1,12 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 export default function ProductDetail() {
     const { id } = useParams<{ id: string }>();
 
     return (
-        <div>
-            <h2>Chi tiết sản phẩm</h2>
-            <p>ID sản phẩm: {id}</p>
+        <div style={{ padding: "20px" }}>
+            <h1>Chi tiết sản phẩm</h1>
+            <p>ID sản phẩm là: <strong>{id}</strong></p>
         </div>
     );
 }
