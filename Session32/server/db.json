@@ -1,0 +1,21 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Nguyen Van A",
+            "age": 21
+        },
+        {
+            "id": 2,
+            "name": "Tran Thi B",
+            "age": 22
+        }
+    ],
+    "posts": [
+        {
+            "id": 1,
+            "title": "Xin chào React",
+            "content": "Đây là bài post đầu tiên"
+        }
+    ]
+}
